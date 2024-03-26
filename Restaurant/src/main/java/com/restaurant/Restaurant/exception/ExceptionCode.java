@@ -1,0 +1,15 @@
+package com.restaurant.Restaurant.exception;
+
+public interface ExceptionCode {
+
+    String DOCUMENT_ALREADY_EXISTS = "E1001";
+    String CLIENT_NOT_FOUND = "E1002";
+    // 400 - BAD REQUEST
+    String INVALID_OR_INCOMPLETE_DATA = "E1003";
+    // 409 - CONFLICT - WHEN THERE AREN'T DATA TO UPDATE BECAUSE ALL THE REQUEST BODY ALREADY EXISTS IN DATABASE
+    String DATA_ALREADY_EXISTS = "E1004";
+    String FANTASY_NAME_ALREADY_EXISTS = "E1005";
+    String PRODUCT_NOT_FOUND = "E1006";
+    String INTERNAL_SERVER_ERROR = "E1007";
+
+}
