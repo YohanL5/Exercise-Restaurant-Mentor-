@@ -24,11 +24,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
@@ -43,7 +38,41 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>3.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.12.5</version>
+			<scope>runtime</scope>
+		</dependency>
 
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.12.5</version>
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.12.5</version>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -60,8 +89,39 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.3.0</version>
 		</dependency>
+ 
+ 
+   <dependency>
+     <groupId>javax</groupId>
+     <artifactId>javaee-api</artifactId>
+     <version>8.0.1</version>
+   </dependency>
+ 
+   <dependency>
+     <groupId>javax</groupId>
+     <artifactId>javaee-api</artifactId>
+     <version>8.0.1</version>
+   </dependency>
+ 
+   <dependency>
+     <groupId>org.apache.ant</groupId>
+     <artifactId>ant</artifactId>
+     <version>1.10.6</version>
+   </dependency>
+ 
+   <dependency>
+     <groupId>javax</groupId>
+     <artifactId>javaee-api</artifactId>
+     <version>8.0.1</version>
+   </dependency>
+ 
+   <dependency>
+     <groupId>org.apache.tomcat</groupId>
+     <artifactId>tomcat-servlet-api</artifactId>
+     <version>10.1.20</version>
+   </dependency>
 
-	</dependencies>
+ </dependencies>
 
 	<build>
 		<plugins>

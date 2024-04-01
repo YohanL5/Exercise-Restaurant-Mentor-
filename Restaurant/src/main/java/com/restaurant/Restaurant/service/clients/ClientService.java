@@ -9,7 +9,12 @@ import com.restaurant.Restaurant.models.dto.ClientDTO;
 import com.restaurant.Restaurant.repository.ClientRepository;
 import com.restaurant.Restaurant.validator.ClientValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -79,6 +84,7 @@ public class ClientService  implements IClientService {
         clientEntity.setEmail(clientDTO.getEmail());
         clientEntity.setPhone(clientDTO.getPhone());
         clientEntity.setDeliveryAddress(clientDTO.getDeliveryAddress());
+        clientEntity.setPassword(clientDTO.getPassword());
         clientRepository.save(clientEntity);
         return mapper.convert(clientEntity);
     }
@@ -93,4 +99,5 @@ public class ClientService  implements IClientService {
         }
         clientRepository.deleteByDocument(document);
     }
+
 }

@@ -19,6 +19,7 @@ public class ClientEntityToDtoMapper implements Converter<ClientEntity, ClientDT
                 .document(clientEntity.getDocument())
                 .email(clientEntity.getEmail())
                 .phone(clientEntity.getPhone())
+                .password(clientEntity.getPassword())
                 .deliveryAddress(clientEntity.getDeliveryAddress())
                 .build();
     }
@@ -30,6 +31,7 @@ public class ClientEntityToDtoMapper implements Converter<ClientEntity, ClientDT
                 .email(clientDTO.getEmail())
                 .phone(clientDTO.getPhone())
                 .deliveryAddress(clientDTO.getDeliveryAddress())
+                .password(clientDTO.getPassword())
                 .build();
     }
 }

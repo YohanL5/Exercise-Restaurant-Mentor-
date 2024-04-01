@@ -37,4 +37,7 @@ public class ClientEntity {
     @Column(name = "delivery_address")
     public String deliveryAddress;
 
+    @Column(name="password")
+    public String password;
+
 }

@@ -1,16 +1,22 @@
 package com.restaurant.Restaurant.controller;
 import com.restaurant.Restaurant.models.dto.ClientDTO;
 import com.restaurant.Restaurant.models.dto.errorDto.ClientErrorDTO;
+import com.restaurant.Restaurant.security.Jwt.JwtServiceImpl;
 import com.restaurant.Restaurant.service.clients.ClientService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/clients")
 public class ClientController {
-
+    @Autowired
     private ClientService clientService;
+
+    @Autowired
+    private JwtServiceImpl jwtService;
 
     public ClientController(ClientService clientService) {
         this.clientService = clientService;
@@ -80,4 +86,7 @@ public class ClientController {
     public void deleteClient(@PathVariable String document){
         clientService.deleteClient(document);
     }
+
+
+
 }
