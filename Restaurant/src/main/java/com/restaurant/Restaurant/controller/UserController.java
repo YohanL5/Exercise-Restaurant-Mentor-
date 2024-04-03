@@ -26,7 +26,7 @@ public class UserController {
     //Security Jwt Methods the login and getClient by name
     @PostMapping("/login")
     public ResponseEntity<?> loginClient(@RequestBody ClientDTO clientDTO){
-        UserDetails clientDetails= userService.loginClient(clientDTO.getDocument());
+        UserDetails clientDetails= userService.loginClient(clientDTO);
         String token= jwtService.generateToken(clientDetails);
         return ResponseEntity.ok(token);
     }
